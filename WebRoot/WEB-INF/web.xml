@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>CustomerLoginServlet</servlet-name>
+    <servlet-class>Control.CustomerLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerLoginServlet</servlet-name>
+    <url-pattern>/CustomerLoginServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>RestaurantLoginServlet</servlet-name>
+    <servlet-class>Control.RestaurantLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RestaurantLoginServlet</servlet-name>
+    <url-pattern>/RestaurantLoginServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>CustomerRegisterServlet</servlet-name>
+    <servlet-class>Control.CustomerRegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerRegisterServlet</servlet-name>
+    <url-pattern>/CustomerRegisterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RestaurantRegisterServlet</servlet-name>
+    <servlet-class>Control.RestaurantRegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RestaurantRegisterServlet</servlet-name>
+    <url-pattern>/RestaurantRegisterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Main</servlet-name>
+    <servlet-class>Control.Main</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Main</servlet-name>
+    <url-pattern>/Main</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CommentServlet</servlet-name>
+    <servlet-class>Control.CommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CommentServlet</servlet-name>
+    <url-pattern>/CommentServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>MenuServlet</servlet-name>
+    <servlet-class>Control.MenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MenuServlet</servlet-name>
+    <url-pattern>/MenuServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ReserveServlet</servlet-name>
+    <servlet-class>Control.ReserveServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReserveServlet</servlet-name>
+    <url-pattern>/ReserveServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>RestaurantServlet</servlet-name>
+    <servlet-class>Control.RestaurantServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RestaurantServlet</servlet-name>
+    <url-pattern>/RestaurantServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>MenuUpdateServlet</servlet-name>
+    <servlet-class>Control.MenuUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MenuUpdateServlet</servlet-name>
+    <url-pattern>/MenuUpdateServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

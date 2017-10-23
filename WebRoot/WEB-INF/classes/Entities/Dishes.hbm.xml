@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- mapping configuration -->
+
+<hibernate-mapping package="Entities" auto-import="true">
+<class name="Dishes" table="DISHES" lazy="false">
+	<id name="Dish_id" column="DISH_ID">
+		<generator class="native"></generator>
+	</id>
+		<property name="DishName" column="DISHNAME" length="50"></property>
+		<property name="Price" column="PRICE" length="50"></property>
+		<property name="Description" column="DESCRIPTION" length="255"></property>
+		<many-to-one name="restaurant" column="m_ID" class="Entities.Restaurant"/>
+
+</class>
+</hibernate-mapping>	

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- mapping configuration -->
+
+<hibernate-mapping package="Entities" auto-import="true">
+<class name="Customer" table="CUSTOMER" lazy="false">
+	<id name="Id" column="U_ID">
+		<generator class="native"></generator>
+	</id>
+	<property name="Name" column="USER" length="50"></property>
+	<property name="Address" column="ADDRESS" length="255"></property>
+	<property name="Phone" column="PHONE" length="50"></property>
+	<set name="OrderBy" inverse="true">
+		<key column="op_ID"></key>
+		<one-to-many class="Entities.Order"></one-to-many>
+	</set>	
+	<set name="commented" inverse="true">
+		<key column="cd_ID"></key>
+		<one-to-many class="Entities.Comment"></one-to-many>
+	</set>
+	<set name="reserved" inverse="true">
+		<key column="rd_ID"></key>
+		<one-to-many class="Entities.Reservation"></one-to-many>
+	</set>
+</class>
+</hibernate-mapping>

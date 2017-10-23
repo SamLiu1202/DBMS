@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- mapping configuration -->
+
+<hibernate-mapping package="Entities" auto-import="true">
+<class name="Comment" table="COMMENT" lazy="false">
+	<id name="CommentId" column="ID">
+		<generator class="native"></generator>
+	</id>
+	<property name="Content" column="CONTENT" length="250"></property>
+	<property name="CommentTime" type="date" column="TIME" length="50"></property>
+	<many-to-one name="restaurant" column="coms_ID" class="Entities.Restaurant"/>
+	<many-to-one name="customer" column="cd_ID" class="Entities.Customer"/>
+
+</class>
+</hibernate-mapping>

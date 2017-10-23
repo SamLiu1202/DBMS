@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- mapping configuration -->
+
+<hibernate-mapping package="Entities" auto-import="true">
+<class name="Reservation" table="RESERVATION" lazy="false">
+	<id name="ReservationID" column="ID">
+		<generator class="native"></generator>
+	</id>
+	<many-to-one name="customer" column="rd_ID" class="Entities.Customer"/>
+	<many-to-one name="restaurant" column="rvs_ID" class="Entities.Restaurant"/>
+	
+	<property name="PeopleNum" column="NUM" length="50"></property>
+	<property name="ReservationTime" column="TIME" length="50"></property>
+</class>
+</hibernate-mapping>
